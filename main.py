@@ -60,8 +60,7 @@ def go(config: DictConfig):
                     "min_price": config['etl']['min_price'],
                     "max_price": config['etl']['max_price']
                 },
-            )            
-
+            )
 
         if "data_check" in active_steps:
             _ = mlflow.run(
@@ -75,6 +74,7 @@ def go(config: DictConfig):
                     "max_price": config['etl']['max_price']
                 },
             )
+            
 
         if "data_split" in active_steps:
             _ = mlflow.run(
@@ -114,6 +114,7 @@ def go(config: DictConfig):
                     "max_tfidf_features": config["modeling"]["max_tfidf_features"]
                 },
             )
+            
 
         if "test_regression_model" in active_steps:
 

@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 """
-Performs basic cleaning on the data and save the results in Weights & Biases parameters [parameter1,parameter2]: parameter1,parameter2,parameter3
+Download from W&B the raw dataset and apply some basic data cleaning, exporting the result to a new artifact
 """
+import sys
+print("Python executable:", sys.executable)
+
 import argparse
 import logging
 import wandb
